@@ -1,6 +1,7 @@
 # Titulo
 
-"Predicción de funciones genéticas utilizando evidencia experimental y árboles filogenéticos: Un modelo evolutivo" o "Ciencia de datos en la práctica"
+"Predicción de funciones genéticas utilizando evidencia experimental y
+árboles filogenéticos: Un modelo evolutivo" o "Ciencia de datos en la práctica"
 
 # Resumen
 
