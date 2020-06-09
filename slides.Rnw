@@ -774,21 +774,22 @@ Imagine that we have 3 functions (rows) and that each node has 2 siblings (colum
   \toprule
   & & \multicolumn{2}{c}{\bf Transitions to} \\
    & & Case 1 & Case 2 \\ \cmidrule(r){3-4}
-  \multicolumn{2}{r}{\textbf{Parent} $\begin{array}{c}\mbox{A} \\ \mbox{B} \\ \mbox{C}\end{array}\left[\begin{array}{c}0 \\ 1 \\ 0\end{array}\right]$} & 
+  \multicolumn{2}{r}{\textbf{Parent} $\begin{array}{c}\mbox{A} \\ \mbox{B} \\ \mbox{C}\end{array}\left[\begin{array}{c}0 \\ 1 \\ 1\end{array}\right]$} & 
   $\left[\begin{array}{cc} %
-    0 & \nhlc{1-3}{0}\hlc{4}{0}\nhlc{5-}{0} \\ %
+    0 & \nhlc{1-2}{1}\hlc{3-5}{1}\nhlc{6-}{1} \\ %
     1 & \nhlc{1-3}{0}\hlc{4-5}{0}\nhlc{6-}{0} \\ %
-    0 & \nhlc{1-2}{1}\hlc{3-5}{1}\nhlc{6-}{1} %
+    1 & \nhlc{1-3}{0}\hlc{4}{1}\nhlc{5-}{1} %
     \end{array}\right]$ & 
   $\left[\begin{array}{cc} %
-    \nhlc{-2}{1}\hlc{3}{1}\nhlc{4}{1}\hlc{5}{1}\nhlc{6-}{1} & 0 \\ %
-    \nhlc{1-4}{0}\hlc{5}{0}\nhlc{6-}{0} & \nhlc{1-4}{0}\hlc{5}{0}\nhlc{6-}{0} \\ %
-    \nhlc{-2}{1}\hlc{3}{1}\nhlc{4}{1}\hlc{5}{1}\nhlc{6-}{1} & 0 %
+    0 & \nhlc{-2}{1}\nhlc{4}{1}\hlc{3}{1}\hlc{5}{1}\nhlc{6-}{1} \\ %
+    \nhlc{-5}{1}\hlc{6}{1}\nhlc{7-}{1} & \nhlc{-4}{0}\hlc{5}{0}\nhlc{6-}{0}\\ %
+    \nhlc{-4}{0}\hlc{5}{0}\nhlc{6-}{0} & \nhlc{1-5}{1}\hlc{6}{1}\nhlc{7-}{1}%
     \end{array}\right]$ \pause \\ \midrule 
   \multicolumn{3}{l}{\textbf{Sufficient statistics}} \pause \\ 
-  & \# Gains & 1 & 2 \pause \\
-  & \# only one offspring changes & 1 & 0 \pause \\
-  & \# changes (total) & 2 & 4 \\ \bottomrule
+  & \# Gains (Neofunctionalization) & 1 & 1 \pause \\
+  & Only one offspring changes (yes/no) & 1 & 0 \pause \\
+  & \# Changes (gain+loss) & 2 & 3 \pause \\
+  & Subfunctionalization (yes/no) & 0 & 1 \\ \bottomrule
   \end{tabular}
   \end{table}
 }
@@ -798,27 +799,27 @@ Imagine that we have 3 functions (rows) and that each node has 2 siblings (colum
   \toprule
   & & \multicolumn{2}{c}{\bf Transitions to} \\
    & & Case 1 & Case 2 \\ \cmidrule(r){3-4}
-  \multicolumn{2}{r}{\textbf{Parent} $\begin{array}{c}\mbox{A} \\ \mbox{B} \\ \mbox{C}\end{array}\left[\begin{array}{c}0 \\ 1 \\ 0\end{array}\right]$} & 
+  \multicolumn{2}{r}{\textbf{Parent} $\begin{array}{c}\mbox{A} \\ \mbox{B} \\ \mbox{C}\end{array}\left[\begin{array}{c}0 \\ 1 \\ 1\end{array}\right]$} & 
   $\left[\begin{array}{cc} %
-    0 & 0 \\ %
+    0 & 1 \\ %
     1 & 0 \\ %
-    0 & 1 %
+    1 & 0 %
     \end{array}\right]$ & 
   $\left[\begin{array}{cc} %
+    1 & 1 \\ %
     1 & 0 \\ %
-    0 & 0 \\ %
     1 & 0 %
     \end{array}\right]$ \pause \\ \midrule 
   \multicolumn{3}{l}{\textbf{Sufficient statistics}} \pause \\ 
-  & \# Gains & 1 & 2 \pause \\
-  & \# only one offspring changes & 1 & 0 \pause \\
-  & \# changes (total) & 2 & 4 \\ \bottomrule
+  & \# Gains (Neofunctionalization) & 1 & 2 \pause \\
+  & Only one offspring changes & 1 & 0 \pause \\
+  & \# Gain + loss & 3 & 4 \\ \bottomrule
   \end{tabular}
   \end{table}
 }
 
 \pause
-In SIFTER, for modelling 3 functions, we need $2^{2\times 3} = 64$ parameters.
+In SIFTER, for modelling 3 functions (with offsprings conditionally independent), we need $2^{2\times 3} = 64$ parameters.
 
 \end{frame}
 
